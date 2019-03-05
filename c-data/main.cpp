@@ -6,7 +6,14 @@
 //  Copyright © 2019 Lawrence Herman. All rights reserved.
 //
 
-#include <iostream>
+//#include <iostream>
+//// used this for setw(x) on output
+//#include <iomanip>
+//// directives for reading and writing files
+//#include <fstream>
+
+#include "main.h"
+
 
 
 int main(int argc, const char * argv[]) {
@@ -47,13 +54,53 @@ int main(int argc, const char * argv[]) {
   
   testMonth = Jan;
   
+  cout<<"Test"<<std::setw(15)<<"Test2\n";
+  
+//  - Include the <fstream> library
+//  - Create a stream (input, output, both)
+//  - ofstream myfile; (for writing to a file)
+//  - ifstream myfile; (for reading a file)
+//  - fstream myfile; (for reading and writing a file)
+//  - Open the file  myfile.open(“filename”);
+//  - Write or read the file
+//  - Close the file myfile.close();
+
+  ofstream testFile ("cTestFile.txt", ios::app);
+  
+  if (testFile.is_open()) {
+    testFile << "\nI am adding a line.\n";
+  } else cout << "Unable to write to file";
+  
+//  You can determine that directory inside your program via GetCurrentDirectory(), and change it to something else via SetCurrentDirectory().
+  
+  testFile.close();
+  // didnt work check later
+  
+  
+  int a = 54;
+  
+  cout << &a << "\n";
+  
+  int * pointToA = &a;
+  
+  cout << "pointerToA stores " << pointToA << "\n";
+  
+  cout << "pointerToA points to " << * pointToA << "\n";
   
   
   
-  //  for (i=0; i<10; i++) {
-  //
-  //  }
   
+  
+  
+  
+
+
+
+
+
+
+
+
 
 
 
