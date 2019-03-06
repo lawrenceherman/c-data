@@ -86,19 +86,6 @@ int main(int argc, const char * argv[]) {
   cout << "pointerToA stores " << pointToA << "\n";
   
   cout << "pointerToA points to " << * pointToA << "\n";
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
 
 
 
